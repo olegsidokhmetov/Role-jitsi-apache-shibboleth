@@ -3,20 +3,20 @@
         dest: "/etc/apache2/sites-available/js.quersys.com.conf"
         content: |
           <VirtualHost *:80>
-              ServerName js.{{ url_jitsi_domain }}
-              Redirect permanent / https://js.{{ url_jitsi_domain }}/
+              ServerName {{ url_jitsi_domain }}
+              Redirect permanent / https://{{ url_jitsi_domain }}/
           </VirtualHost>
 
           <VirtualHost *:443>
-              ServerName js.{{ url_jitsi_domain }}
+              ServerName {{ url_jitsi_domain }}
               UseCanonicalName    On
               # enable HTTP/2, if available
               Protocols h2 http/1.1
 
               SSLEngine on
               SSLProxyEngine on
-              SSLCertificateFile    /etc/ssl/js.quersys.com.crt
-              SSLCertificateKeyFile /etc/ssl/js.quersys.com.key
+              SSLCertificateFile    /etc/ssl/{{ url_jitsi_domain }}.crt
+              SSLCertificateKeyFile /etc/ssl/{{ url_jitsi_domain }}.key
 
               Header always set Strict-Transport-Security "max-age=63072000"
 
@@ -31,7 +31,7 @@
 
               ErrorDocument 404 /static/404.html
 
-              Alias "/config.js" "/etc/jitsi/meet/js.{{ url_jitsi_domain }}-config.js"
+              Alias "/config.js" "/etc/jitsi/meet/{{ url_jitsi_domain }}-config.js"
               <Location /config.js>
                   Require all granted
               </Location>

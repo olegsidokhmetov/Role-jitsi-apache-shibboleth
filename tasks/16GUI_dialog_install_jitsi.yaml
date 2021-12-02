@@ -4,7 +4,7 @@
         name: "jitsi-videobridge2"
         question: "jitsi-videobridge/jvb-hostname"
         vtype: "string"
-        value: "js.quersys.com"
+        value: "{{ url_jitsi_domain }}"
 
     - name: "Configure jitsi-meet package"
       debconf:
@@ -18,12 +18,12 @@
         name: "jitsi-meet-web-config"
         question: "cert-path-crt"
         vtype: "string"
-        value: "etc/ssl/js.quersys.com.key"
+        value: "etc/ssl/{{ url_jitsi_domain }}.key"
 
     - name: "Configure jitsi-meet package"
       debconf:
         name: "jitsi-meet-web-config"
         question: "cert-path-key"
         vtype: "string"
-        value: "/etc/ssl/js.quersys.com.crt"
+        value: "/etc/ssl/{{ url_jitsi_domain }}.crt"
   # Setting DIALOG end

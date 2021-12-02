@@ -4,10 +4,10 @@
         content: |
           var config = {
               hosts: {
-                  domain: 'js.{{ url_jitsi_domain }}',
-                  muc: 'conference.js.{{ url_jitsi_domain }}'
+                  domain: '{{ url_jitsi_domain }}',
+                  muc: 'conference.{{ url_jitsi_domain }}'
               },
-              bosh: '//js.{{ url_jitsi_domain }}/http-bind',
+              bosh: '//{{ url_jitsi_domain }}/http-bind',
               testing: {
                   p2pTestMode: false
               },
