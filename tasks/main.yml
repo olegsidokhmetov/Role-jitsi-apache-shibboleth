@@ -68,23 +68,20 @@
     - name:  Configuration Videobridge. Insert a line at the end of a file.
       include: 21configuración_Videobridge_sip.comminicator.yaml 
 
-    # - name: añadir shard a videobridge en file /etc/jitsi/videobridge/sip-communicator.properties
-    #   include: add_config_block_for_videobridge.yaml 
-
     - name:  Create new configurationin file "js.quersys.com-config.js"
-      include: 24new_configurationin_js.quersys.com-config.js.yaml 
+      include: 22new_configurationin_js.quersys.com-config.js.yaml 
 
     - name: Configuration of file "all.css". Insert a line at the end of a file.
-      include: 25configuration_file_all.css.yaml 
+      include: 23configuration_file_all.css.yaml 
 
     - name: Ansible multiple replace in file "interface_config.js"
-      include: 26replace_data_file_interface_config.js.yaml 
+      include: 24replace_data_file_interface_config.js.yaml 
 
     - name: set of autentication shibboleth
-      include: 27autentication_shibboleth.yaml 
+      include: 25autentication_shibboleth.yaml 
 
     - name: Add_config_block_for_videobridge and send password
-      include: 28add_config_block_for_videobridge_and_password.yaml
+      include: 26Next_number_of_shard_script_and_edit_sip-communicator.yaml
 
     - name: Restart multiple services in a loop
-      include: 29restart_multiple_services.yaml 
+      include: 27restart_multiple_services.yaml 
