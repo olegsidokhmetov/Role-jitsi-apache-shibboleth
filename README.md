@@ -21,10 +21,9 @@ A list of other roles hosted on Galaxy should go here, plus any details in regar
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
----
-- hosts: jvb1
+Including an example of how to use your role and tasks (for instance, with variables passed in as parameters) is always nice for users too:
+```
+- hosts: nameofhost
   become: true
   vars_files:
     - /etc/ansible/roles/Jitsi/vars/main.yml
@@ -110,6 +109,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - name: Restart multiple services in a loop
       include: 27restart_multiple_services.yaml 
+```
 
 License
 -------
