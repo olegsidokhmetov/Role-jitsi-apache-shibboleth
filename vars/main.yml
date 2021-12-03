@@ -1,6 +1,5 @@
 ---
 
-# Settings jitsi.videobridge
 url_jitsi_hostname: localhost
 url_jitsi_domain: js.quersys.com
 USERNAME: jvb
@@ -8,4 +7,3 @@ PASSWORD: 123456789
 MUC_JIDS: quersys.com
 MUC_NICKNAME: jvbx
 siguiente_shard: 1
-# Settings jitsi.videobridge♠
