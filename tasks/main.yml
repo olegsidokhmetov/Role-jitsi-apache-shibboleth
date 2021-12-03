@@ -14,7 +14,7 @@
     - name:  Install services
       include: 3install_services.yaml 
 
-    - name: install gnupg2
+    - name: Install gnupg2
       include: 4install_gnupg2.yaml 
 
     - name: Enable appropriate apache2 modules
@@ -47,19 +47,19 @@
     - name:  Add apt-key for jitsi
       include: 14apt-key_apt-repo_jitsi.yaml 
 
-    - name: update and upgrade packages
+    - name: Update and upgrade packages
       include: 15update_upgrade.yaml 
 
     - name: Configure jitsi-meet package (GUI shell)
       include: 16GUI_dialog_install_jitsi.yaml 
 
-    - name: install jitsi-meet
+    - name: Install jitsi-meet
       include: 17install_jitsi-meet.yaml 
 
-    - name:  install jitsi-prosody
+    - name:  Install jitsi-prosody
       include: 18configuration_prosody.yaml 
 
-    - name: permissions for "localhost.cnf" & "localhost.crt"
+    - name: Permissions for "localhost.cnf" & "localhost.crt"
       include: 19change_permission_localhost.cnf_localhost.crt_localhost.key.yaml 
 
     - name: Copy file quersystem-logo.png
