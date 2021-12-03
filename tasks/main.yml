@@ -80,7 +80,7 @@
     - name: set of autentication shibboleth
       include: 25autentication_shibboleth.yaml 
 
-    - name: Add_config_block_for_videobridge and send password
+    - name: Next number of shard (shard-1, shard-2 etc)script and edit sip-communicator file
       include: 26Next_number_of_shard_script_and_edit_sip-communicator.yaml
 
     - name: Restart multiple services in a loop
