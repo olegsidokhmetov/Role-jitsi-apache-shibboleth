@@ -125,7 +125,7 @@ Configuration of role
 
 Example host
 ----------------
-
+```
 [jitsi_server]
 jitsi ansible_host=89.108.88.37
 
@@ -135,7 +135,7 @@ jvb1 ansible_host=194.58.92.102
 [jitsi_servers:children]
 jitsi_server
 jitsi_jvbs
-
+```
 
 License
 -------
