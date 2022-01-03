@@ -7,3 +7,5 @@ PASSWORD: 123456789
 MUC_JIDS: quersys.com
 MUC_NICKNAME: jvbx
 siguiente_shard: 1
+Host_Node1: jvb1
+NAT_HARVESTER_IP: 95.216.101.211

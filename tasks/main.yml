@@ -1,5 +1,5 @@
 ---
-- hosts: jvb1
+- hosts: jitsi
   become: true
   vars_files:
     - /etc/ansible/roles/Jitsi/vars/main.yml
