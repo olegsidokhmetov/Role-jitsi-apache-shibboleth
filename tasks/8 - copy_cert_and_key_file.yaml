@@ -1,10 +1,10 @@
-    - name: Copy cert file js.quersys.com.crt
+    - name: №8 Copy cert file js.quersys.com.crt
       copy:
         src: /etc/ansible/roles/Jitsi/files/ssl/{{ url_jitsi_domain }}.crt
         dest: /etc/ssl/{{ url_jitsi_domain }}.crt
         remote_src: false
 
-    - name: Copy  key file js.quersys.com.key
+    - name: №8 Copy  key file js.quersys.com.key
       copy:
         src: /etc/ansible/roles/Jitsi/files/ssl/{{ url_jitsi_domain }}.key
         dest: /etc/ssl/{{ url_jitsi_domain }}.key

@@ -1,4 +1,4 @@
-    - name: install gnupg2
+    - name: №4 install gnupg2
       apt:
         name: gnupg2
         update_cache: true

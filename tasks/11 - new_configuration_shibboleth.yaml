@@ -1,4 +1,4 @@
-    - name: Create new configuration of shibboleth
+    - name: №11 Create new configuration of shibboleth
       copy:
         dest: "/etc/shibboleth/shibboleth2.xml"
         content: |

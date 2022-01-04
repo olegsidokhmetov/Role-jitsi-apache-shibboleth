@@ -3,7 +3,7 @@
         state: absent
         regexp: "admins = { }"
 
-    - name: Configuration prosody
+    - name: №18 Configuration prosody
       blockinfile:
         dest: /etc/prosody/prosody.cfg.lua
         insertafter: '-- Example: admins = { "user1@example.com", "user2@example.net" }'

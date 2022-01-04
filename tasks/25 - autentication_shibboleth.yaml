@@ -1,4 +1,4 @@
-    - name: autentication shibboleth
+    - name: №25 Autentication shibboleth
       blockinfile:
         dest: /etc/jitsi/jicofo/jicofo.conf
         insertafter: 'jicofo {'

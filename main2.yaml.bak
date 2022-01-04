@@ -1,0 +1,20 @@
+- hosts: jitsi
+  become: true
+  vars_files:
+    - /etc/ansible/roles/Jitsi/vars/main.yml
+  tasks:
+
+    # - name: Creates directory "/home/scripts"
+    #   file:
+    #     path: /home/scripts/{{ item.name2 }}
+    #     state: directory
+    #   with_items: 
+    #     - "{{ names }}"
+    #     - "{{ table }}"
+
+    - shell: hostname > /home/scripts/{{item.file}}
+          # msg: "This ran on this host: {{ item }}"
+      delegate_to: "{{ item.host }}"
+      with_items:
+        - "{{ host_jvb }}"
+    

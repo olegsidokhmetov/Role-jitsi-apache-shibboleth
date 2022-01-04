@@ -1,4 +1,4 @@
-    - name: Install dependencies
+    - name: №2 Install dependencies
       apt:
         name: "{{ packages }}"
         state: present

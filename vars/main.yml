@@ -1,11 +1,25 @@
 ---
 
-url_jitsi_hostname: localhost
-url_jitsi_domain: js.quersys.com
-USERNAME: jvb
-PASSWORD: 123456789
+jvbhost:                                 #Añadir host JVB
+  - host: jvb1
+  - host: jvb2
+  - host: jvb3
+
+NAT_HARVESTER_IP: 95.216.101.211
+
+url_jitsi_hostname: localhost            #Nombre de hostname
+url_jitsi_domain: js.quersys.com         #Nombre de domain
+
+USERNAME: jvb                            #Nombre de usario
+PASSWORD: 123456789                      #Contaseña
 MUC_JIDS: quersys.com
 MUC_NICKNAME: jvbx
-siguiente_shard: 1
-Host_Node1: jvb1
-NAT_HARVESTER_IP: 95.216.101.211
+siguiente_shard: 1                       #Numero de siguiente servidor
+
+# host_jvb:
+#  - host: jvb1
+#    file: asd
+#  - host: jvb2
+#    file: asd2 
+#  - host: jvb3
+#    file: asd3

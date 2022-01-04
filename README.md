@@ -129,12 +129,22 @@ Example host
 [jitsi_server]
 jitsi ansible_host=89.108.88.37
 
-[jitsi_jvbs]
+[jitsi_jvb1]
 jvb1 ansible_host=194.58.92.102
 
-[jitsi_servers:children]
-jitsi_server
-jitsi_jvbs
+[jitsi_jvb2]
+jvb2 ansible_host=80.78.253.228
+
+[jitsi_jvb3]
+jvb3 ansible_host=194.67.92.198
+
+[jvb_js]
+194.58.92.102
+80.78.253.228
+194.67.92.198
+
+[jitsi_js:children]
+jvb_js
 ```
 
 License

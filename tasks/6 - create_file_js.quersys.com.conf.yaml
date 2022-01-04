@@ -1,4 +1,4 @@
-    - name: Create new configuration file "js.quersys.com.conf"
+    - name: №6 Create new configuration file "js.quersys.com.conf"
       copy:
         dest: "/etc/apache2/sites-available/js.quersys.com.conf"
         content: |

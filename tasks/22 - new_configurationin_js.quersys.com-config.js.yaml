@@ -1,4 +1,4 @@
-    - name: Create new configurationin file "js.quersys.com-config.js"
+    - name: №22 Create new configurationin file "js.quersys.com-config.js"
       copy:
         dest: "/etc/jitsi/meet/js.quersys.com-config.js" 
         content: |

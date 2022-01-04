@@ -1,7 +1,6 @@
-    - name: Next number of shard script
+    - name: №26 Next number of shard script
       shell: expr 1 + $(grep 'shard-' /etc/jitsi/videobridge/sip-communicator.properties | awk -F '.' '{print $6}' |uniq | sort | tail -n1 | cut -d '-' -f2 | xargs printf "%d" )
       register: siguiente_shard
-      delegate_to: "{{ Host_Node1 }}"
 
     - debug:
         msg: "{{ siguiente_shard.stdout }}"
@@ -13,7 +12,7 @@
     - debug:
         msg: "{{ MYPASSWORD.stdout }}"
 
-    - name: Configuration sip-communicator.properties
+    - name: №26 Configuration sip-communicator.properties
       blockinfile:
         dest: /etc/jitsi/videobridge/sip-communicator.properties
         block: |
@@ -23,28 +22,38 @@
           org.jitsi.videobridge.xmpp.user.shard-siguiente.PASSWORD={ PASSWORD }
           org.jitsi.videobridge.xmpp.user.shard-siguiente.MUC_JIDS=JvbBrewery@internal.auth.js.{{ MUC_JIDS }}
           org.jitsi.videobridge.xmpp.user.shard-siguiente.MUC_NICKNAME={{ MUC_NICKNAME }}
-      delegate_to: "{{ Host_Node1 }}"
+      delegate_to: "{{ item.host }}"
+      with_items:
+        - "{{ jvbhost }}"
 
     - replace:
         path: /etc/jitsi/videobridge/sip-communicator.properties
         regexp: 'shard-siguiente'
         replace: 'shard-{{ siguiente_shard.stdout }}'
-      delegate_to: "{{ Host_Node1 }}"
+      delegate_to: "{{ item.host }}"
+      with_items:
+        - "{{ jvbhost }}"
 
     - replace:
         path: /etc/jitsi/videobridge/sip-communicator.properties
         regexp: '{ PASSWORD }'
         replace: '{{MYPASSWORD.stdout}}'
-      delegate_to: "{{ Host_Node1 }}"
+      delegate_to: "{{ item.host }}"
+      with_items:
+        - "{{ jvbhost }}"
 
     - replace:
         path: /etc/jitsi/videobridge/sip-communicator.properties
         regexp: '^(.*)# BEGIN ANSIBLE MANAGED BLOCK(.*)$'
         replace: '#'
-      delegate_to: "{{ Host_Node1 }}"
+      delegate_to: "{{ item.host }}"
+      with_items:
+        - "{{ jvbhost }}"
 
     - lineinfile:
         dest: /etc/jitsi/videobridge/sip-communicator.properties
         state: absent
         regexp: "# END ANSIBLE MANAGED BLOCK"
-      delegate_to: "{{ Host_Node1 }}"
+      delegate_to: "{{ item.host }}"
+      with_items:
+        - "{{ jvbhost }}"

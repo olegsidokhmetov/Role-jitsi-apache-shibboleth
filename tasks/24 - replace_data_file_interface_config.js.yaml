@@ -1,4 +1,4 @@
-    - name: Ansible multiple replace in file "interface_config.js"
+    - name: №24 Ansible multiple replace in file "interface_config.js"
       replace:
         path: "{{ item.path }}"
         regexp: "{{ item.regexp }}"

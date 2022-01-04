@@ -1,5 +1,5 @@
-    - name: Update apt cache
+    - name: №1 Update apt cache
       apt: update_cache=yes cache_valid_time=3600
 
-    - name: Upgrade all apt packages
+    - name: №1 Upgrade all apt packages
       apt: upgrade=dist

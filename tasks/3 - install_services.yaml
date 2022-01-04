@@ -1,4 +1,4 @@
-    - name: Install services
+    - name: №3 Install services
       apt:
         name: "{{ packages }}"
         state: present

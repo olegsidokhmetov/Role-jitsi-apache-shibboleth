@@ -1,4 +1,4 @@
-    - name: Restart multiple services in a loop
+    - name: №27 Restart multiple services in a loop
       service:
         name: "{{ item }}"
         state: restarted

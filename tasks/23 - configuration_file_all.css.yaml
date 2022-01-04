@@ -1,4 +1,4 @@
-    - name: Configuration of file "all.css". Insert a line at the end of a file.
+    - name: №23 Configuration of file "all.css". Insert a line at the end of a file.
       lineinfile:
         dest: /usr/share/jitsi-meet/css/all.css
         line: '{{ item }}'
