@@ -1,5 +1,5 @@
 ---
-- hosts: jitsi
+- hosts: js-consorci01 
   become: true
   vars_files:
     - /etc/ansible/roles/Jitsi/vars/main.yml

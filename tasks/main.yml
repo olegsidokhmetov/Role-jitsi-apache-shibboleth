@@ -60,8 +60,8 @@
     - name: №20 Copy file quersystem-logo.png
       import_tasks: 20 - copy_image_logo.png.yaml 
 
-    - name: №21 Configuration Videobridge. Insert a line at the end of a file.
-      import_tasks: 21 - configuración_Videobridge_sip.comminicator.yaml 
+      #    - name: №21 Configuration Videobridge. Insert a line at the end of a file.
+      #      import_tasks: 21 - configuración_Videobridge_sip.comminicator.yaml 
 
     - name: №22 Create new configurationin file "js.quersys.com-config.js"
       import_tasks: 22 - new_configurationin_js.quersys.com-config.js.yaml 

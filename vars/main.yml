@@ -5,15 +5,22 @@ jvbhost:                                 #Añadir host JVB
   - host: jvb2
   - host: jvb3
 
-NAT_HARVESTER_IP: 95.216.101.211
+# Solo descomentar y configurar en caso de instalacion nueva y activar desde task/main.yml 
+#NAT_HARVESTER_IP: 95.216.101.211
 
-url_jitsi_hostname: localhost            #Nombre de hostname
-url_jitsi_domain: js.quersys.com         #Nombre de domain
+   # Esto de momento no
+#url_jitsi_hostname: localhost            #Nombre de hostname
+
+url_jitsi_domain: js.consorcidelaribera.com         #Nombre de domain
 
 USERNAME: jvb                            #Nombre de usario
 PASSWORD: 123456789                      #Contaseña
-MUC_JIDS: quersys.com
-MUC_NICKNAME: jvbx
+  
+# Esto de momento no
+#MUC_JIDS: consorcidelaribera.com
+
+# Modificado para utilizar item.host (jvbhost)
+#MUC_NICKNAME: jvbx
 siguiente_shard: 1                       #Numero de siguiente servidor
 
 # host_jvb:

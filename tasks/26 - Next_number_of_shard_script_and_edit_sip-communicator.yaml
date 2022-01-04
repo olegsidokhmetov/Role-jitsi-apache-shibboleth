@@ -16,15 +16,14 @@
       blockinfile:
         dest: /etc/jitsi/videobridge/sip-communicator.properties
         block: |
-          org.jitsi.videobridge.xmpp.user.shard-siguiente.HOSTNAME={{ url_jitsi_hostname }}
+          org.jitsi.videobridge.xmpp.user.shard-siguiente.HOSTNAME={{ url_jitsi_domain }}
           org.jitsi.videobridge.xmpp.user.shard-siguiente.DOMAIN=auth.{{ url_jitsi_domain }}
           org.jitsi.videobridge.xmpp.user.shard-siguiente.USERNAME={{ USERNAME }}
           org.jitsi.videobridge.xmpp.user.shard-siguiente.PASSWORD={ PASSWORD }
-          org.jitsi.videobridge.xmpp.user.shard-siguiente.MUC_JIDS=JvbBrewery@internal.auth.js.{{ MUC_JIDS }}
-          org.jitsi.videobridge.xmpp.user.shard-siguiente.MUC_NICKNAME={{ MUC_NICKNAME }}
+          org.jitsi.videobridge.xmpp.user.shard-siguiente.MUC_JIDS=JvbBrewery@internal.auth.{{ url_jitsi_domain }}
+          org.jitsi.videobridge.xmpp.user.shard-siguiente.MUC_NICKNAME={{ item.host }}
       delegate_to: "{{ item.host }}"
-      with_items:
-        - "{{ jvbhost }}"
+      with_items: "{{ jvbhost }}"
 
     - replace:
         path: /etc/jitsi/videobridge/sip-communicator.properties
